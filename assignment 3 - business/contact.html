@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JC's Sneaker Shop | Contact</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/blocks.css">
+        <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+        <link rel="stylesheet" href="css/blocks.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/script.js"></script>
+
+
+    </head>
+    <!--    <body>-->
+    <body onscroll="scroll2();" class="grad">
+        <div id="inner">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navcolor" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="references.html">References</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Brand Sites
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.nike.ca/"target="_blank">Nike</a>
+                                <a class="dropdown-item" href="https://www.adidas.ca/en"target="_blank">Adidas</a>
+                                <a class="dropdown-item" href="https://www.converse.ca/"target="_blank">Converse</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <img src="images/banner.jpg"/>
+            <div class="empty3"></div>
+            <h3 id="soup2">Contact</h3>
+            <div class="empty3"></div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="name" class="form-control"  id="name" name="name" onblur="checkName();"id="exampleFormControlInput1" placeholder="Name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1"  class="form-label">Email address</label>
+                <input type="email" class="form-control"  id="email" name="email" id="exampleFormControlInput1" placeholder="name@example.com" onblur="checkEmail(this.value)">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text"for="inputGroupSelect01">Reason for message</label>
+                </div>
+                <!--                <select class="custom-select rfm" id="inputGroupSelect01" onchange="updateReason();">-->
+                <select id="countryBox" onchange="updateProvState();">
+                    <option>Options</option>
+                    <option>General inquiry</option>
+                    <option>Pricing and bulk rates</option> 
+                    <option>Product info</option>
+                    <option>Shipping</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="mb-3 hidden" id="pcode">
+                <label  id="pcodeLabel"class="form-label">Product ID</label>
+                <input for="exampleFormControlInput1"type="ID" class="form-control" id="ID" name="ID" id="exampleFormControlInput1" onblur="checkID(this.value)">
+                <!--                <input type="ID" class="form-control"  id="ID" name="ID" id="exampleFormControlInput1" placeholder="name@example.com" onblur="checkID(this.value)">-->
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea type="message" class="form-control"  id="message" onblur="checkText();"id="exampleFormControlInput1" rows="3"></textarea>
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Submit
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Message sent.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Your message has been sent.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="empty"></div>
+
+        <div class="empty"></div>
+        <img src="images/white_converse_high.jpg" id="soup" />
+
+        <div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>
